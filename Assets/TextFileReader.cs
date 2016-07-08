@@ -2,55 +2,98 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.IO;
+using System.Text;
 
 
 public class TextFileReader : MonoBehaviour {
 
 	public string filename;
-	public Text textField;
+	public Text[] tArray = new Text[10];
+
 	//public Canvas myCanvas;
 	// this must match the definition in PostBuildScript
 	public const string DATA_DIR = "DataFiles";
-	//int i = 0;
-	//string names = "texts" + i;
 	private StringReader reader;
 	// Use this for initialization
 	void Start () {
 		reader = GetStringReaderFromFilename (filename);
+		readArray();
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Jump") == true) { 
+		//if (Input.GetButtonDown ("Jump") == true) { 
 			// read one line at a time if they press the space bar
-			string line = reader.ReadLine ();
-			Text nextText = gameObject.AddComponent<Text> ();
-			nextText.transform.parent = transform.FindChild ("Canvas");
-			nextText.text = line;
+		//string line = "";// = reader.ReadLine ();
+//		Debug.Log("Line: " + line);
+			//Text nextText = gameObject.AddComponent<Text> ();
+			//nextText.transform.parent = transform.FindChild ("Canvas");
+		//nextText.text = line;
+
+
 	//		GameObject names = new GameObject();
 	//			names.text = line;
 			//textField.text = line;
-			Debug.Log ("First line: " + line);
+//			Debug.Log ("First line: " + line);
+		//}
+	}
+/*	public string reverse(string s){
+		char[] ar = s.ToCharArray();
+		System.Array.Reverse(ar);
+
+
+		return new string(ar);
+
+	}
+*/
+	public void readArray(){
+		
+		string line = "";
+		string answer = "";
+	
+		for (int i = 0; i < tArray.Length; i+=2) {
+
+		
+			line = FlipFont.bob(reader.ReadLine()); 
+			tArray[i].text = line; 
+
+			answer = FlipFont.bob(reader.ReadLine());
+				
+			tArray[i+1].text = answer;
+
+				tArray[i].GetComponentInParent<Trigger>().TheAnswer = answer;
+
 		}
 	}
-
 	// this just creates a string reader regardless of whether it's a file or not
 	public StringReader GetStringReaderFromFilename(string filename)
 	{
+		//FileStream reader;
 		StreamReader reader;
-		FileInfo sourceFile = new FileInfo (Application.dataPath 
+		/*FileInfo sourceFile = new FileInfo (Application.dataPath 
 			+ Path.DirectorySeparatorChar 
 			+ DATA_DIR 
 			+ Path.DirectorySeparatorChar
 			+ filename);
-		if (sourceFile != null && sourceFile.Exists) {
-			reader = sourceFile.OpenText ();
-			return new StringReader (reader.ReadToEnd ());
+			*/
+		string path = Application.dataPath
+		              + Path.DirectorySeparatorChar
+		              + DATA_DIR
+		              + Path.DirectorySeparatorChar
+		              + filename;
+		string filestr = File.ReadAllText(path, new UnicodeEncoding());
+		//if (sourceFile != null && sourceFile.Exists) {
+		//	UnicodeEncoding encoding = new UnicodeEncoding();
+		//	reader = sourceFile.OpenText();
+
+				return new StringReader(filestr);
+		/*
 		} else 
 		{
 			Debug.Log ("Unable to find " + Application.dataPath + "/" + filename);
 		}
 		return null;
+		*/
 	}
 }
