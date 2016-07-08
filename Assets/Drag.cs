@@ -6,12 +6,11 @@ using System.Collections;
 public class Drag : MonoBehaviour {
 	private Vector3 screenPoint;
 	private Vector3 offset;
-	private Vector3 startPoint;
 
 	// Use this for initialization
-	void Start () {
-		startPoint = transform.position;
-	}
+	//void Start () {
+	
+//	}
 	
 	// Update is called once per frame
 //	void Update () {
@@ -19,14 +18,14 @@ public class Drag : MonoBehaviour {
 //	}
 
 	void OnMouseDown(){
-		Debug.Log ("Down: offset" + offset);
+		Debug.Log ("offset" + offset);
 		screenPoint = Camera.main.WorldToScreenPoint (gameObject.transform.position);
 		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 
 	}
 
 	void OnClick(){
-		Debug.Log ("Click: offset1" + offset);
+		Debug.Log ("offset1" + offset);
 		screenPoint = Camera.main.WorldToScreenPoint (gameObject.transform.position);
 		offset = gameObject.transform.position - Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z));
 
@@ -36,9 +35,5 @@ public class Drag : MonoBehaviour {
 		Vector3 curScreenPoint = new Vector3 (Input.mousePosition.x, Input.mousePosition.y, screenPoint.z);
 		Vector3 curPosition = Camera.main.ScreenToWorldPoint (curScreenPoint) + offset;
 		transform.position = curPosition;
-	}
-	void OnMouseUp(){
-		Debug.Log("Mouse Released");
-		transform.position = startPoint;
 	}
 }

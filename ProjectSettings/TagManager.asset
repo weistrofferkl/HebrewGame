@@ -4,18 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Sentence 1
-  - Sentence 2
-  - Sentence 3
-  - Sentence 4
-  - Sentence 5
-  - Answer 1
-  - Answer 2
-  - Answer 3
-  - Answer 4
-  - Answer 5
   - TheCanvas
-  - Sentence
   layers:
   - Default
   - TransparentFX
@@ -25,7 +14,7 @@ TagManager:
   - UI
   - 
   - 
-  - 0
+  - 
   - 
   - 
   - 
