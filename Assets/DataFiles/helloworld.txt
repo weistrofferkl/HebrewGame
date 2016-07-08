@@ -1,8 +1,10 @@
-hello world!
-how are you?
-you need the Editor directory with the script in your Assets folder
-this creates a post build process
-so that this DataFiles directory (also in Assets)
-is copied over to your final build
-cool, eh?
-שלום
+What has a tail?
+Cat
+What barks?
+Dog
+What eats pie?
+Me
+What goes with coffee?
+Donuts
+What goes with tea?
+Tea Cakes
