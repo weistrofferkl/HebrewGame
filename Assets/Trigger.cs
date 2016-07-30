@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Trigger : MonoBehaviour {
 
 	private Text myText;
 	public string TheAnswer{ get; set; }
+	//public string NextLevel;
 	bool completed = false;
+
 	// Use this for initialization
 	void Start () {
 		myText = GetComponentInChildren<Text>();
@@ -29,6 +32,9 @@ public class Trigger : MonoBehaviour {
 
 
 				completed = true;
+
+				TextFileReader.counter++;
+				Debug.Log("Counter: " + TextFileReader.counter);
 
 				GameObject[] array = GameObject.FindGameObjectsWithTag("Sentence");
 				foreach (GameObject O in array) {

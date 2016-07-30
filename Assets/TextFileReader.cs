@@ -3,11 +3,14 @@ using UnityEngine.UI;
 using System.Collections;
 using System.IO;
 using System.Text;
+using UnityEngine.SceneManagement;
 
 
 public class TextFileReader : MonoBehaviour {
 
 	public string filename;
+	public string nextLevel;
+	public static int counter = 0;
 	public Text[] tArray;
 	public Text[] sentenceArray = new Text[5];
 	public Text[] answerArray = new Text[5];
@@ -56,6 +59,11 @@ public class TextFileReader : MonoBehaviour {
 			//textField.text = line;
 //			Debug.Log ("First line: " + line);
 		//}
+
+		if (counter == 5) {
+			Debug.Log(nextLevel);
+			SceneManager.LoadScene(nextLevel);
+		}
 	}
 /*	public string reverse(string s){
 		char[] ar = s.ToCharArray();
@@ -66,6 +74,12 @@ public class TextFileReader : MonoBehaviour {
 
 	}
 */
+	public int getCounter (){
+		return counter;
+	}
+	//public  void setCounter(int counter){
+//		this.counter = counter;
+	//}
 	public void shuffle(Text[] answers){
 		for (int i = 0; i < answers.Length; i++) {
 			Text temp = answers[i];

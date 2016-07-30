@@ -675,7 +675,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1081a7e1376f412e8e82de6c85a073e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: First 1
 --- !u!1 &203238927
 GameObject:
   m_ObjectHideFlags: 0
@@ -810,7 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filename: Hebrew3.txt
-  nextLevel: First 1
+  nextLevel: 
   tArray:
   - {fileID: 0}
   - {fileID: 0}
@@ -999,7 +998,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1081a7e1376f412e8e82de6c85a073e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: First 1
 --- !u!61 &590296416
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1087,7 +1085,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1081a7e1376f412e8e82de6c85a073e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: First 1
 --- !u!61 &601820594
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1876,7 +1873,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1081a7e1376f412e8e82de6c85a073e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: First 1
 --- !u!61 &955047216
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2295,7 +2291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1081a7e1376f412e8e82de6c85a073e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: First 1
 --- !u!61 &1496285555
 BoxCollider2D:
   m_ObjectHideFlags: 0
