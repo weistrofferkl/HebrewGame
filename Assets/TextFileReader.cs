@@ -8,7 +8,9 @@ using System.Text;
 public class TextFileReader : MonoBehaviour {
 
 	public string filename;
-	public Text[] tArray = new Text[10];
+	public Text[] tArray;
+	public Text[] sentenceArray = new Text[5];
+	public Text[] answerArray = new Text[5];
 
 	//public Canvas myCanvas;
 	// this must match the definition in PostBuildScript
@@ -16,8 +18,25 @@ public class TextFileReader : MonoBehaviour {
 	private StringReader reader;
 	// Use this for initialization
 	void Start () {
+		shuffle(answerArray);
+		//reader = GetStringReaderFromFilename (filename);
+		//readArray();
+
+
+		tArray = new Text[10];
+		tArray[0] = sentenceArray[0];
+		tArray[1] = answerArray[0];
+		tArray[2] = sentenceArray[1];
+		tArray[3] = answerArray[1];
+		tArray[4] = sentenceArray[2];
+		tArray[5] = answerArray[2];
+		tArray[6] = sentenceArray[3];
+		tArray[7] = answerArray[3];
+		tArray[8] = sentenceArray[4];
+		tArray[9] = answerArray[4];
 		reader = GetStringReaderFromFilename (filename);
 		readArray();
+
 
 	}
 	
@@ -47,6 +66,16 @@ public class TextFileReader : MonoBehaviour {
 
 	}
 */
+	public void shuffle(Text[] answers){
+		for (int i = 0; i < answers.Length; i++) {
+			Text temp = answers[i];
+			int r = Random.Range(i, answers.Length);
+
+			answers[i] = answers[r];
+			answers[r] = temp;
+		}
+		
+	}
 	public void readArray(){
 		
 		string line = "";
