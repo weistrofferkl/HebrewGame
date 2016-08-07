@@ -1003,7 +1003,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: MymylSm
+  m_Text: MymylDm
 --- !u!222 &830706442
 CanvasRenderer:
   m_ObjectHideFlags: 0
