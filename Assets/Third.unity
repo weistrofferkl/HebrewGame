@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   filename: Hebrew3.txt
-  nextLevel: 
+  nextLevel: EndScene
   tArray:
   - {fileID: 0}
   - {fileID: 0}

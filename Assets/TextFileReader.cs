@@ -60,8 +60,9 @@ public class TextFileReader : MonoBehaviour {
 //			Debug.Log ("First line: " + line);
 		//}
 
-		if (counter == 5) {
-			Debug.Log(nextLevel);
+		if (counter == tArray.Length/2) {
+			counter = 0;
+			Debug.Log("Loading: " + nextLevel);
 			SceneManager.LoadScene(nextLevel);
 		}
 	}
