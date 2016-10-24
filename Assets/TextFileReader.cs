@@ -17,7 +17,7 @@ public class TextFileReader : MonoBehaviour {
 
 	//public Canvas myCanvas;
 	// this must match the definition in PostBuildScript
-	public const string DATA_DIR = "DataFiles";
+	public const string DATA_DIR = "Development";
 	private StringReader reader;
 	// Use this for initialization
 	void Start () {

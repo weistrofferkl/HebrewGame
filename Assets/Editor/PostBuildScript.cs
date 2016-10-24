@@ -30,6 +30,9 @@ public class PostBuildScript {
 		case BuildTarget.StandaloneWindows64:
 			appDataDir = Path.GetFileNameWithoutExtension(pathToBuildProject) + "_Data";
 			break;
+		case BuildTarget.WebGL:
+			appDataDir = "Development";
+			break;
 		default:
 			Debug.Log ("Untested platform case, need to make sure the copy works!");
 			throw new IOException ("Untested platform case for Post Build, need to make sure the copy works properly");
@@ -44,12 +47,20 @@ public class PostBuildScript {
 		                 + PostBuildScript.DATA_DIR
 		                 + Path.DirectorySeparatorChar;
 			
-		string copydir = pathToBuildProject
-		                 + Path.DirectorySeparatorChar
-		                 + appDataDir
-		                 + Path.DirectorySeparatorChar
-		                 + PostBuildScript.DATA_DIR
-		                 + Path.DirectorySeparatorChar;
+		string copydir;
+		if (target != BuildTarget.WebGL) {	
+			copydir = pathToBuildProject
+			+ Path.DirectorySeparatorChar
+			+ appDataDir
+			+ Path.DirectorySeparatorChar
+			+ PostBuildScript.DATA_DIR
+			+ Path.DirectorySeparatorChar;
+		} else {
+			copydir = pathToBuildProject
+				+ Path.DirectorySeparatorChar
+				+ appDataDir
+				+ Path.DirectorySeparatorChar;
+		}
 		
 		Debug.Log ("Copying from: " + datadir + " to: " + copydir);
 
