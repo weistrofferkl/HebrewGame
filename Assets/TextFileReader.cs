@@ -126,13 +126,23 @@ public class TextFileReader : MonoBehaviour {
 		              + DATA_DIR
 		              + Path.DirectorySeparatorChar
 		              + filename;
-		string filestr = File.ReadAllText(path, new UnicodeEncoding());
+
+		if (!Application.isWebPlayer) {
+			string filestr = File.ReadAllText(path, new UnicodeEncoding());
+			return new StringReader(filestr);
+
+		} else {
+			string filestr = GetComponent<WWWFile>().LoadText();
+			return new StringReader(filestr);
+		}
+
+		//string filestr = File.ReadAllText(path, new UnicodeEncoding());
 		//if (sourceFile != null && sourceFile.Exists) {
 		//	UnicodeEncoding encoding = new UnicodeEncoding();
 		//	reader = sourceFile.OpenText();
 
-				return new StringReader(filestr);
-		/*
+		//		return new StringReader(filestr);
+	/*
 		} else 
 		{
 			Debug.Log ("Unable to find " + Application.dataPath + "/" + filename);

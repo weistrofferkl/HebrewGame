@@ -939,6 +939,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 538890574}
   - 114: {fileID: 538890572}
+  - 114: {fileID: 538890573}
   m_Layer: 0
   m_Name: TextFileReader
   m_TagString: Untagged
@@ -982,6 +983,17 @@ MonoBehaviour:
   - {fileID: 847058570}
   - {fileID: 725059504}
   - {fileID: 1964193789}
+--- !u!114 &538890573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 538890571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b67bd39f3f9c84e55b682964931eb708, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &538890574
 Transform:
   m_ObjectHideFlags: 0
