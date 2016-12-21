@@ -958,7 +958,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd54399d2241e44998edcd665326f63f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: Hebrew3.txt
+  filename: 
   nextLevel: Second
   tArray:
   - {fileID: 0}
@@ -994,6 +994,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b67bd39f3f9c84e55b682964931eb708, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  URL: http://www.cs.du.edu/~chrisg/hebrewgame/data/Hebrew3.txt
 --- !u!4 &538890574
 Transform:
   m_ObjectHideFlags: 0
