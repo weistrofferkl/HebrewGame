@@ -13,9 +13,9 @@ public class FlipFont : MonoBehaviour {
 
 	Text myText;
 	//string indiLine = "";
-	int numAlphaInLine = 20;
+//	int numAlphaInLine = 20;
 
-	string sample = "אני _ לחנות";
+//	string sample = "אני _ לחנות";
 
 	void Awake(){
 		myText = GetComponent<Text>();
@@ -27,7 +27,7 @@ public class FlipFont : MonoBehaviour {
 		List<string> listofWords = Regex.Split(sample, @"\s").ToList();
 		foreach (string s in listofWords) {
 			text = Reverse(s) + " " + text;
-			Debug.Log("S: " + Reverse(s));
+		//	Debug.Log("S: " + Reverse(s));
 		}
 		return text;
 	

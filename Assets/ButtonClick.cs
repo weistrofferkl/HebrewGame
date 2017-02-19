@@ -3,20 +3,20 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 
 public class ButtonClick : MonoBehaviour {
-	public bool loadNextlvl = false;
+	public bool LoadNextLevel = false;
 	public string levelName;
 
 	// Use this for initialization
 	void Start () {
-
+		LoadNextLevel = false;
 	}
 
 	// Update is called once per frame
 	void Update () {
 
-		if (loadNextlvl) {
-			//	Debug.Log ("changing to next lvl");
-			loadNextlvl = false;
+		if (LoadNextLevel == true) {
+			Debug.Log ("changing to next lvl");
+			LoadNextLevel = false;
 
 			SceneManager.LoadScene (levelName);
 		}
@@ -24,7 +24,7 @@ public class ButtonClick : MonoBehaviour {
 	}
 
 	public void OnMyClick(){
-		loadNextlvl = true;
+		LoadNextLevel = true;
 		//Debug.Log ("Button Clicked");
 		//		Application.LoadLevel ("First Scene");
 	}

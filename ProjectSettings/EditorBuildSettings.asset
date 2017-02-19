@@ -14,8 +14,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/First.unity
   - enabled: 1
-    path: Assets/Second.unity
+    path: Assets/FirstReview.unity
   - enabled: 1
+    path: Assets/NewSecond.unity
+  - enabled: 1
+    path: Assets/SecondReview.unity
+  - enabled: 1
+    path: Assets/NewThird.unity
+  - enabled: 1
+    path: Assets/ThirdReview.unity
+  - enabled: 0
+    path: Assets/Second.unity
+  - enabled: 0
     path: Assets/Third.unity
   - enabled: 1
     path: Assets/EndScene.unity

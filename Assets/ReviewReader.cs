@@ -6,7 +6,7 @@ using System.Text;
 using UnityEngine.SceneManagement;
 using System;
 
-public class TextFileReader : MonoBehaviour
+public class ReviewReader : MonoBehaviour
 {
 
 	public string filename;
@@ -14,7 +14,7 @@ public class TextFileReader : MonoBehaviour
 	public static int counter = 0;
 	public Text[] tArray;
 	public Text[] sentenceArray = new Text[5];
-	public Text[] answerArray = new Text[5];
+	//public Text[] answerArray = new Text[5];
 
 	//public Canvas myCanvas;
 	// this must match the definition in PostBuildScript
@@ -35,21 +35,21 @@ public class TextFileReader : MonoBehaviour
 
 		Debug.Log ("Continuing TFR.LoadText()");
 
-		shuffle (answerArray);
+		//shuffle (answerArray);
 		//reader = GetStringReaderFromFilename (filename);
 		//readArray();
 
-		tArray = new Text[10];
+		tArray = new Text[5];
 		tArray [0] = sentenceArray [0];
-		tArray [1] = answerArray [0];
-		tArray [2] = sentenceArray [1];
-		tArray [3] = answerArray [1];
-		tArray [4] = sentenceArray [2];
-		tArray [5] = answerArray [2];
-		tArray [6] = sentenceArray [3];
-		tArray [7] = answerArray [3];
-		tArray [8] = sentenceArray [4];
-		tArray [9] = answerArray [4];
+		//tArray [1] = answerArray [0];
+		tArray [1] = sentenceArray [1];
+		//tArray [3] = answerArray [1];
+		tArray [2] = sentenceArray [2];
+		//tArray [5] = answerArray [2];
+		tArray [3] = sentenceArray [3];
+		//tArray [7] = answerArray [3];
+		tArray [4] = sentenceArray [4];
+		//tArray [9] = answerArray [4];
 		reader = GetStringReaderFromFilename (filename);
 		Debug.Log ("Received string reader from filename");
 		readArray ();
@@ -76,12 +76,12 @@ public class TextFileReader : MonoBehaviour
 		//            Debug.Log ("First line: " + line);
 		//}
 
-		if (counter == tArray.Length / 2)
-		{
-			counter = 0;
-			Debug.Log ("Loading: " + nextLevel);
-			SceneManager.LoadScene (nextLevel);
-		}
+		//if (counter == tArray.Length / 2)
+		//{
+	///		counter = 0;
+	//		Debug.Log ("Loading: " + nextLevel);
+	//		SceneManager.LoadScene (nextLevel);
+	//	}
 	}
 	/*    public string reverse(string s){
         char[] ar = s.ToCharArray();
@@ -92,14 +92,14 @@ public class TextFileReader : MonoBehaviour
 
     }
 */
-	public int getCounter ()
+/*	public int getCounter ()
 	{
 		return counter;
-	}
+	}*/
 	//public  void setCounter(int counter){
 	//        this.counter = counter;
 	//}
-	public void shuffle (Text[] answers)
+/*	public void shuffle (Text[] answers)
 	{
 		for (int i = 0; i < answers.Length; i++)
 		{
@@ -112,14 +112,14 @@ public class TextFileReader : MonoBehaviour
 
 	}
 
-
+*/
 	public void readArray ()
 	{
 
 		string line = "";
-		string answer = "";
+		//string answer = "";
 
-		for (int i = 0; i < tArray.Length; i += 2)
+		for (int i = 0; i < tArray.Length; i++)
 		{
 
 
@@ -128,11 +128,11 @@ public class TextFileReader : MonoBehaviour
 			tArray [i].text = line; 
 
 
-			answer = FlipFont.bob (reader.ReadLine ());
-			tArray [i + 1].text = answer;
+		//	answer = FlipFont.bob (reader.ReadLine ());
+		//	tArray [i + 1].text = answer;
 
 
-			tArray [i].GetComponentInParent<Trigger> ().TheAnswer = answer;
+		//	tArray [i].GetComponentInParent<Trigger> ().TheAnswer = answer;
 
 		}
 	}
@@ -161,7 +161,7 @@ public class TextFileReader : MonoBehaviour
 		//
 		//}
 		//else
-	/*	{
+		/*	{
 
 			try
 			{
@@ -181,7 +181,7 @@ public class TextFileReader : MonoBehaviour
 		//    UnicodeEncoding encoding = new UnicodeEncoding();
 		//    reader = sourceFile.OpenText();
 
-		        return new StringReader(filestr);
+		return new StringReader(filestr);
 		/*
         } else 
         {
