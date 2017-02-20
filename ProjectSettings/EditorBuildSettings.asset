@@ -12,6 +12,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/InfoScene.unity
   - enabled: 1
+    path: Assets/Credits.unity
+  - enabled: 1
     path: Assets/First.unity
   - enabled: 1
     path: Assets/FirstReview.unity
