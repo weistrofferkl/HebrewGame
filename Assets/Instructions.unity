@@ -560,7 +560,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 13
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -571,12 +571,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "\"Complete\" is all about using Hebrew vocabulary workds to complete sentences!
-    The game is played by using the vocabulary words on the right side to complete
-    a set of five sentences. \n\nAfter each set of sentences has been successfully
-    completed, their completed forms will be shown in order to cement the review.
-    \n\nIn total, there are three sets of five sentences, once all three sets have
-    been completed, the game ends!  "
+  m_Text: "\"Complete\" is all about using Hebrew vocabulary words to complete sentences!
+    The game is played by using the vocabulary words on the right side of the screen
+    to complete the set of five sentences on the left side of the screen.\n\nAfter
+    each set of sentences has been successfully completed, their completed forms will
+    be shown in order to provide an additional review resource. \n\nIn total, there
+    are three sets of five sentences. The game ends once all three sets have been
+    completed!  "
 --- !u!222 &830546539
 CanvasRenderer:
   m_ObjectHideFlags: 0
